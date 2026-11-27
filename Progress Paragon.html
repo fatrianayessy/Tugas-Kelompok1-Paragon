@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paragon CSR – Prototype (HTML + JS, tanpa CSS)</title>
+</head>
+<body>
+<header>
+  <nav aria-label="Navigasi utama">
+    <button type="button" data-go="home" aria-label="Paragon Logo – ke Home"><strong>▼ PARAGON CORP</strong></button>
+    <ul>
+      <li><button type="button" data-go="home" data-nav="home">Home</button></li>
+      <li><button type="button" data-go="home" data-anchor="overview" data-nav="overview">Overview</button></li>
+      <li><button type="button" data-go="category" data-nav="category">Category</button></li>
+      <li><button type="button" data-go="gallery" data-nav="gallery">Photos Gallery</button></li>
+      <li><button type="button" data-go="home" data-anchor="report" data-nav="report">Report</button></li>
+      <li><button type="button" data-go="contact" data-nav="contact">Contact Us</button></li>
+      <li><button type="button" id="searchBtn" aria-label="Cari">🔍</button></li>
+    </ul>
+  </nav>
+  <div id="searchbox" hidden>
+    <label for="q">Cari program:</label>
+    <input id="q" type="search" placeholder="Ketik lalu tekan Enter">
+  </div>
+</header>
+
+<main>
+
+<div id="p-home" data-page>
+
+
+  <section id="overview">
+    <h2>About Us</h2>
+    <button type="button" data-info="Logo ParagonCorp|Logo perusahaan. Klik logo pada navigasi untuk kembali ke Home.">
+      <strong>PARAGON</strong><br>TECHNOLOGY AND INNOVATION
+    </button>
+    <p>PT Paragon Technology and Innovation (ParagonCorp) adalah perusahaan manufaktur kosmetik dan produk perawatan diri terbesar di Indonesia, dengan merek populer seperti Wardah, Make Over, Emina, Kahf, Biodef, Wonderly, Instaperfect, dan Crystallure.</p>
+
+    <h3>Our Goals</h3>
+    <ul>
+      <li>Sampai 2027 | Mempertegas dampak program dengan peningkatan cakupan awardee beasiswa</li>
+      <li>Sampai 2030 | Pengurangan jejak sampah industri ke TPA dan optimalisasi eco-design packaging</li>
+    </ul>
+
+    <h3>Our Achievement</h3>
+    <ul>
+      <li><button type="button" data-info="Jumlah Penerima Manfaat|150K+ penerima manfaat program CSR. (Data contoh – ganti dengan data resmi perusahaan dan cantumkan periode.)"><strong>150K+</strong> Penerima Manfaat</button></li>
+      <li><button type="button" data-info="Wilayah Terjangkau|34 provinsi di Indonesia. (Data contoh.)"><strong>34</strong> Wilayah Terjangkau</button></li>
+      <li><button type="button" data-info="Jumlah Program|500+ program telah dilaksanakan. (Data contoh.)"><strong>500+</strong> Jumlah Program</button></li>
+      <li><button type="button" data-info="Perempuan Diberdayakan|10K+ perempuan diberdayakan. (Data contoh.)"><strong>10K+</strong> Perempuan Diberdayakan</button></li>
+    </ul>
+  </section>
+
+  <section id="cat">
+    <h2>CSR CATEGORY</h2>
+    <p>Klik pada setiap pilar untuk melihat detail program</p>
+    <div id="catCards"></div>
+  </section>
+
+  <section>
+    <h2>BEST PROGRAM</h2>
+    <p>Program unggulan dari setiap kategori</p>
+    <div id="bestCards"></div>
+  </section>
+
+
+  <section id="report">
+    <h2>CSR ANNUAL REPORT</h2>
+    <p>Unduh laporan keberlanjutan kami</p>
+    <div id="reports"></div>
+  </section>
+</div>
+
+<div id="p-category" data-page hidden>
+  <p>Beranda › Category › <span id="crumbCat">Education</span></p>
+  <h1 id="catTitle">CSR IN EDUCATION</h1>
+  <p>Investasi terbaik untuk masa depan Indonesia</p>
+
+  <!-- Tab kategori: Pendidikan, Kesehatan, Pemberdayaan Perempuan, Lingkungan -->
+  <div role="tablist" id="tabs" aria-label="Kategori CSR"></div>
+
+  <!-- Program utama: Nama Program, Deskripsi, Tahun, Target, Publikasi terkait -->
+  <section id="feat" aria-label="Program utama"></section>
+
+  <section>
+    <h2>Daftar Program</h2>
+    <label for="yearSel">Tahun Pelaksanaan:</label>
+    <select id="yearSel"></select>
+    <label for="progQ">Cari program:</label>
+    <input id="progQ" type="search" placeholder="Cari program…">
+    <div id="progList"></div>
+  </section>
+</div>
+  <p>Dokumentasi integritas dan kebijakan nyata di lapangan</p>
+  <div id="galChips"></div>
+  <h2>Semua Foto</h2>
+  <label for="galYear">Tahun:</label>
+  <select id="galYear"></select>
+  <label for="galQ">Cari foto:</label>
+  <input id="galQ" type="search" placeholder="Cari foto…">
+  <div id="galGrid"></div>
+  <div id="pager"></div>
+</div>
+
+<div id="p-contact" data-page hidden>
+  <p>Beranda › Contact Us</p>
+  <h1>Contact Us</h1>
+  <p>Kami siap membantu dan menjawab pertanyaan Anda</p>
+
+  <!-- Email, Phone Number, Fax, Alamat -->
+  <ul>
+    <li><button type="button" data-info="Email|csr@paragon-innovation.com (simulasi membuka aplikasi email).">✉️ Email: csr@paragon-innovation.com</button></li>
+    <li><button type="button" data-info="Phone Number|+62 21 1234 5678 (contoh). Pada perangkat mobile akan memulai panggilan.">📞 Phone Number: +62 21 1234 5678</button></li>
+    <li><button type="button" data-info="Fax|+62 21 1234 5679 (contoh).">📠 Fax: +62 21 1234 5679</button></li>
+    <li><button type="button" data-info="Alamat|Jl. Swadaya IV No. 7, Jakarta Timur (contoh).">📍 Alamat: Jl. Swadaya IV No. 7, Jakarta Timur</button></li>
+  </ul>
+
+
+  <form id="form" novalidate>
+    <h2>Kirim Pesan</h2>
+    <p><label for="n1">Nama Depan</label><br><input id="n1" required></p>
+    <p><label for="n2">Nama Belakang</label><br><input id="n2"></p>
+    <p><label for="em">Email</label><br><input id="em" type="email" placeholder="nama@email.com" required></p>
+    <p><label for="ph">No. Telepon</label><br><input id="ph" type="tel" placeholder="+62"></p>
+    <p><label for="tp">Topik</label><br>
+      <select id="tp"><option>Pilih topik pertanyaan…</option><option>Kemitraan</option><option>Beasiswa</option><option>Media</option><option>Lainnya</option></select></p>
+    <p><label for="ms">Pesan</label><br><textarea id="ms" rows="4" cols="40" placeholder="Tulis pesan Anda"></textarea></p>
+    <p><button type="submit">Kirim Pesan</button></p>
+  </form>
+
+  <section>
+    <h2>Lokasi Kantor</h2>
+    <button type="button" data-info="Lokasi Kantor|Peta interaktif (simulasi). Pada versi final tampilkan embed peta.">🌐 Lihat Peta</button>
+    <p>PT Paragon Technology and Innovation<br>Jl. Swadaya IV No. 7, Jakarta Timur 13430</p>
+    <button type="button" data-info="Instagram|Membuka akun Instagram Paragon (simulasi).">Instagram</button>
+    <button type="button" data-info="LinkedIn|Membuka LinkedIn Paragon (simulasi).">LinkedIn</button>
+    <button type="button" data-info="YouTube|Membuka kanal YouTube Paragon (simulasi).">YouTube</button>
+  </section>
+</div>
+
+</main>
+
+<footer>
+  <section>
+    <h4>▼ PARAGON CORP</h4>
+    <p>PT Paragon Technology and Innovation<br>
+      Email: csr@paragon-innovation.com<br>
+      Phone: +62 21 1234 5678<br>
+      Fax: +62 21 1234 5679<br>
+      Alamat: Jl. Swadaya IV No. 7, Jakarta Timur</p>
+  </section>
+  <nav aria-label="Kategori footer"><h4>Category</h4><ul id="fCat"></ul></nav>
+  <nav aria-label="Tautan footer">
+    <h4>Tautan</h4>
+    <ul>
+      <li><button type="button" data-go="home" data-anchor="report">Laporan Tahunan</button></li>
+      <li><button type="button" data-go="gallery">Photos Gallery</button></li>
+      <li><button type="button" data-go="contact">Hubungi Kami</button></li>
+    </ul>
+  </nav>
+  <nav aria-label="Media sosial">
+    <h4>Ikuti Kami</h4>
+    <ul>
+      <li><button type="button" data-info="Instagram|Membuka Instagram (simulasi).">Instagram</button></li>
+      <li><button type="button" data-info="LinkedIn|Membuka LinkedIn (simulasi).">LinkedIn</button></li>
+      <li><button type="button" data-info="YouTube|Membuka YouTube (simulasi).">YouTube</button></li>
+    </ul>
+  </nav>
+  <p>Copyright Paragon 2026 All Right Reserved</p>
+</footer>
+
+<dialog id="modal" aria-labelledby="mt">
+  <h3 id="mt"></h3>
+  <img id="mi" alt="" width="400" hidden>
+  <p id="mp"></p>
+  <form method="dialog"><button>Tutup</button></form>
+</dialog>
+
+<script>
+const CATS={
+ edu:{n:"Education",t:"Pendidikan",ic:"📖",d:"Kami peduli dengan akses pendidikan. Inilah komitmen kami terhadap pendidikan di Indonesia.",
+  p:[["Paragon Scholarship Program","Beasiswa penuh bagi mahasiswa berprestasi disertai pelatihan kepemimpinan.",2025,"Mahasiswa"],["Inspiring Lecturer Program","Peningkatan kapasitas dosen melalui coaching dan proyek kolaboratif.",2026,"Dosen"],["Novo Club Batch 4","Pengembangan kepemimpinan dan kesiapan karier mahasiswa.",2026,"Mahasiswa"],["Wardah Inspiring Teacher","Pengembangan kompetensi guru melalui pelatihan dan inovasi pembelajaran.",2025,"Guru"]]},
+ health:{n:"Health",t:"Kesehatan",ic:"❤️",d:"Kami peduli dengan kesehatan. Inilah komitmen kami terhadap kesehatan masyarakat.",
+  p:[["Paragon Health Initiative","Pemeriksaan kesehatan dan edukasi bagi masyarakat.",2025,"Masyarakat"],["Posyandu Paragon","Dukungan layanan kesehatan ibu dan anak.",2024,"Ibu & anak"],["Edukasi Kesehatan Remaja","Penyuluhan kesehatan di sekolah.",2026,"Pelajar"],["Bantuan Alat Kesehatan","Donasi alat kesehatan untuk fasilitas daerah.",2024,"Puskesmas"]]},
+ women:{n:"Woman Empowerment",t:"Pemberdayaan Perempuan",ic:"👩",d:"Kami peduli dengan perempuan. Inilah komitmen kami untuk pemberdayaan perempuan.",
+  p:[["Womenpreneur Paragon","Pelatihan keterampilan dan pengembangan usaha perempuan.",2025,"Perempuan pelaku usaha"],["Wardah Beauty Class","Pelatihan keterampilan kecantikan.",2024,"Perempuan muda"],["Literasi Keuangan Perempuan","Edukasi pengelolaan keuangan usaha.",2026,"Ibu rumah tangga"],["Kelas Digital Marketing","Pelatihan pemasaran digital.",2025,"UMKM perempuan"]]},
+ env:{n:"Environment",t:"Lingkungan",ic:"🌱",d:"Kami peduli dengan lingkungan. Inilah komitmen kami terhadap lingkungan yang bersih dan lestari.",
+  p:[["Mangrove Plantation & Clean Water","Penanaman mangrove dan bersih-bersih pantai.",2025,"Masyarakat pesisir"],["Akademi Bank Sampah","Pelatihan pengolahan sampah menjadi produk bermanfaat.",2024,"Anggota bank sampah"],["Glow & Green","Kampanye pengumpulan kemasan kosmetik untuk didaur ulang.",2026,"Konsumen"],["Paragon Empties Station","Fasilitas pengumpulan kemasan kosong.",2026,"Konsumen"]]}
+};
+
+</script>
+    
+</body>
+</html>
