@@ -1,6 +1,6 @@
 # Optimalisasi Website CSR ParagonCorp
 
-**Optimalisasi Website CSR ParagonCorp sebagai Media Informasi Dampak dan Transparansi Program CSR** merupakan proyek **Ujian Akhir Semester (UAS)** mata kuliah Pemrograman yang dikembangkan oleh **Kelompok 1 – Kelas MICE 3A** (Program Studi D4 MICE, Jurusan Administrasi Niaga, Politeknik Negeri Jakarta)[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span).
+**Optimalisasi Website CSR ParagonCorp sebagai Media Informasi Dampak dan Transparansi Program CSR** merupakan proyek **Ujian Akhir Semester (UAS)** mata kuliah Pemrograman yang dikembangkan oleh **Kelompok 1 – Kelas MICE 3A** (Program Studi D4 MICE, Jurusan Administrasi Niaga, Politeknik Negeri Jakarta)
 
 Proyek ini berfokus pada pengembangan antarmuka dan pengaktifan navigasi empat pilar utama *Corporate Social Responsibility* (CSR) ParagonCorp (*Education*, *Health*, *Women Empowerment*, dan *Environment*) serta penyajian data dampak program secara transparan, interaktif, dan mudah diakses.
 
